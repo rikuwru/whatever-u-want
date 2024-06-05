@@ -1,0 +1,1731 @@
+[gd_scene load_steps=70 format=3 uid="uid://v7p3428qpw6l"]
+
+[ext_resource type="Script" path="res://nodes.gd" id="1_bkhem"]
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_g1xob"]
+[ext_resource type="Texture2D" uid="uid://ddct2p5ya2nsn" path="res://MENUS/Black.png" id="2_k7kxl"]
+[ext_resource type="Texture2D" uid="uid://vvia23arn543" path="res://MENUS/riku.png" id="3_k5vpw"]
+[ext_resource type="FontFile" uid="uid://usd8pm5ndqdk" path="res://MENUS/Gothic War.otf" id="4_5hr7j"]
+[ext_resource type="Script" path="res://choices.gd" id="5_6r652"]
+[ext_resource type="AudioStream" uid="uid://dh507adxbatrt" path="res://MENUS/Refined Menu Theme.ogg" id="7_4jmhx"]
+[ext_resource type="FontFile" uid="uid://b2u24d6vrb5t0" path="res://MENUS/KHMenu.otf" id="7_6umju"]
+[ext_resource type="Texture2D" uid="uid://c5wp8il78sw2b" path="res://MENUS/hover_button.png" id="7_qtfiy"]
+[ext_resource type="AudioStream" uid="uid://7j1dhx4mbefp" path="res://MENUS/hover.ogg" id="7_w8v2h"]
+[ext_resource type="Script" path="res://MENUS/menu_cursor.gd" id="8_ku8a3"]
+[ext_resource type="AudioStream" uid="uid://2ctyh1rolenh" path="res://MENUS/hover2.ogg" id="8_udeve"]
+[ext_resource type="AudioStream" uid="uid://1r8626mankwr" path="res://MENUS/hover3.ogg" id="9_0bf0j"]
+[ext_resource type="AudioStream" uid="uid://dyr6gnw2tls75" path="res://MENUS/refine_hover2.ogg" id="9_m5v46"]
+[ext_resource type="AudioStream" uid="uid://b8gnvw1t4q4ke" path="res://MENUS/refine_hover.ogg" id="10_26ylb"]
+[ext_resource type="AudioStream" uid="uid://5i2iawukah0j" path="res://MENUS/refine.ogg" id="11_4q43f"]
+[ext_resource type="Script" path="res://MENUS/settings.gd" id="16_cjj30"]
+[ext_resource type="Script" path="res://MENUS/settingschoices.gd" id="18_i267c"]
+[ext_resource type="Script" path="res://musicvolume.gd" id="18_tkbxy"]
+[ext_resource type="AudioStream" uid="uid://bvi0s5v5u0ggr" path="res://MENUS/backsfx.ogg" id="18_tmill"]
+
+[sub_resource type="Animation" id="Animation_xs5yi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NewGame:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(202, -590)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NewGame:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LoadGame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(202, -524)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LoadGame:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Settings:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(174, -459)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Settings:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LoadGame:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Settings:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("NewGame:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0ot4c"]
+resource_name = "menu_fade"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../riku:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 4.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2176, -572), Vector2(-1348, -514), Vector2(462, -129)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../riku:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 4.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(4903, 2758), Vector2(4903, 2758), Vector2(2120, 1193)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../riku:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 4, 4.3, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../into_oblivion:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(9, 14.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(138, -1.99997), Vector2(242, 217)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../into_oblivion:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9, 14.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.07657, 2.07657), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../into_oblivion:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(9, 14.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../into_bg:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(14.3, 15.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.66396, 1.66396)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../into_bg:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(14.3, 15.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(242, 217), Vector2(18, 115)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../into_bg:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(14.2, 14.3, 15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Settings:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(17, 19.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-438, -459), Vector2(174, -459)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("NewGame:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(17, 19.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-164, -590), Vector2(202, -590)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("LoadGame:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(17, 19.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-280, -524), Vector2(202, -524)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("NewGame:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(17, 19.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Settings:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(18.2, 19.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("LoadGame:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(17.7, 19.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("NewGame:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(17, 17.0002, 19.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.15, 1.15), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Settings:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(17, 19.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("LoadGame:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(17, 17.0002, 19.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g25y6"]
+_data = {
+"RESET": SubResource("Animation_xs5yi"),
+"menu_fade": SubResource("Animation_0ot4c")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cs7y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4j7qr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vkcv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wha4w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5f7e"]
+
+[sub_resource type="Animation" id="Animation_o5bya"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Landing/choices/Settings:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(204, -481)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Landing/choices/LoadGame:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(227, -524)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Landing/choices/NewGame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(149, -580)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Landing/choices/NewGame:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.15, 1.15)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Landing/choices/LoadGame:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Landing/choices/Settings:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Landing/choices/NewGame:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Landing/choices/LoadGame:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Landing/choices/Settings:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Landing/choices/Cursor:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(159, -581)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Landing/choices/Cursor:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_3o8dh"]
+resource_name = "load_game_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Landing/choices/LoadGame:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(202, -524), Vector2(149, -539)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Landing/choices/Settings:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(174, -459), Vector2(204, -481)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Landing/choices/NewGame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(202, -590), Vector2(227, -580)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Landing/choices/NewGame:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Landing/choices/LoadGame:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Landing/choices/Settings:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_c42kn"]
+resource_name = "load_game_hover_exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Landing/choices/LoadGame:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(149, -539), Vector2(202, -524)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Landing/choices/Settings:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(204, -481), Vector2(174, -459)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Landing/choices/NewGame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(227, -580), Vector2(202, -590)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Landing/choices/NewGame:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Landing/choices/LoadGame:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Landing/choices/Settings:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jpgbi"]
+resource_name = "new_game_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Landing/choices/NewGame:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(202, -590), Vector2(149, -580)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Landing/choices/LoadGame:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(202, -524), Vector2(227, -524)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Landing/choices/Settings:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(174, -459), Vector2(204, -481)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Landing/choices/LoadGame:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Landing/choices/Settings:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Landing/choices/NewGame:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.15, 1.15)]
+}
+
+[sub_resource type="Animation" id="Animation_r1pfl"]
+resource_name = "new_game_hover_exit"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Landing/choices/Settings:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(204, -481), Vector2(174, -459)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Landing/choices/LoadGame:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(227, -524), Vector2(202, -524)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Landing/choices/NewGame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(149, -580), Vector2(202, -590)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Landing/choices/NewGame:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.15, 1.15), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Landing/choices/LoadGame:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Landing/choices/Settings:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tpioe"]
+resource_name = "nothing_selected"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Landing/choices/NewGame:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Landing/choices/NewGame:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(202, -590)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Landing/choices/LoadGame:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Landing/choices/LoadGame:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(202, -524)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Landing/choices/Settings:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Landing/choices/Settings:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(174, -459)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Landing/choices/NewGame:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Landing/choices/LoadGame:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Landing/choices/Settings:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3rvqp"]
+_data = {
+"RESET": SubResource("Animation_o5bya"),
+"load_game_hover": SubResource("Animation_3o8dh"),
+"load_game_hover_exit": SubResource("Animation_c42kn"),
+"new_game_hover": SubResource("Animation_jpgbi"),
+"new_game_hover_exit": SubResource("Animation_r1pfl"),
+"nothing_selected": SubResource("Animation_tpioe")
+}
+
+[sub_resource type="Animation" id="Animation_ic5wg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadGame:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Settings:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cursor:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(159, -581)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cursor:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1xhlw"]
+resource_name = "hover_fade_load"
+length = 1.05
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadGame:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cursor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(156.51, -514), Vector2(149.47, -514), Vector2(156.51, -514)]
+}
+
+[sub_resource type="Animation" id="Animation_5wena"]
+resource_name = "hover_fade_new"
+length = 1.05
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NewGame:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cursor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(156.51, -581), Vector2(149.47, -581), Vector2(156.51, -581)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cursor:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_j5kqx"]
+resource_name = "hover_fade_settings"
+length = 1.05
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Settings:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cursor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(156.51, -450), Vector2(149.47, -450), Vector2(156.51, -450)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5i8dk"]
+_data = {
+"RESET": SubResource("Animation_ic5wg"),
+"hover_fade_load": SubResource("Animation_1xhlw"),
+"hover_fade_new": SubResource("Animation_5wena"),
+"hover_fade_settings": SubResource("Animation_j5kqx")
+}
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_5ykh3"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_jrain"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_sjr2q"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_nc5i8"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rh6es"]
+animation = &"load_game_hover_exit"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7gx6p"]
+animation = &"load_game_hover"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_td6n6"]
+animation = &"new_game_hover_exit"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nqcw7"]
+animation = &"new_game_hover"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gto0y"]
+animation = &"nothing_selected"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_o36ci"]
+nodes/Exits/node = SubResource("AnimationNodeBlend2_5ykh3")
+nodes/Exits/position = Vector2(380, 480)
+"nodes/Hover Blend/node" = SubResource("AnimationNodeBlend2_jrain")
+"nodes/Hover Blend/position" = Vector2(120, 200)
+"nodes/Hover Exit Blend/node" = SubResource("AnimationNodeBlend2_sjr2q")
+"nodes/Hover Exit Blend/position" = Vector2(380, 220)
+nodes/Hovers/node = SubResource("AnimationNodeBlend2_nc5i8")
+nodes/Hovers/position = Vector2(-40, 440)
+"nodes/Load Hover/node" = SubResource("AnimationNodeAnimation_7gx6p")
+"nodes/Load Hover/position" = Vector2(-260, 640)
+"nodes/Load Hover Exit/node" = SubResource("AnimationNodeAnimation_rh6es")
+"nodes/Load Hover Exit/position" = Vector2(140, 640)
+"nodes/New Hover/node" = SubResource("AnimationNodeAnimation_nqcw7")
+"nodes/New Hover/position" = Vector2(-280, 460)
+"nodes/New Hover Exit/node" = SubResource("AnimationNodeAnimation_td6n6")
+"nodes/New Hover Exit/position" = Vector2(140, 480)
+nodes/Nothing/node = SubResource("AnimationNodeAnimation_gto0y")
+nodes/Nothing/position = Vector2(-200, 200)
+nodes/output/position = Vector2(660, 360)
+node_connections = [&"Exits", 0, &"New Hover Exit", &"Exits", 1, &"Load Hover Exit", &"Hover Blend", 0, &"Nothing", &"Hover Blend", 1, &"Hovers", &"Hover Exit Blend", 0, &"Hover Blend", &"Hover Exit Blend", 1, &"Exits", &"Hovers", 0, &"New Hover", &"Hovers", 1, &"Load Hover"]
+
+[sub_resource type="Animation" id="Animation_6eveu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_alk0d"]
+resource_name = "settings_entered"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-196, -98), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.15682, 1.15682), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xpodp"]
+resource_name = "settings_exited"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-196, -98)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.15682, 1.15682)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a3c36"]
+_data = {
+"RESET": SubResource("Animation_6eveu"),
+"settings_entered": SubResource("Animation_alk0d"),
+"settings_exited": SubResource("Animation_xpodp")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mrn3h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d2og0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_robmj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6pym8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ef7k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_faojm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvssq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ounrg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g1rw5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_njtep"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m7o77"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rc8nq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7033"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2b1l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6brho"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bkhem")
+
+[node name="Landing" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g1xob")
+
+[node name="BG" type="TextureRect" parent="Landing"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_k7kxl")
+
+[node name="riku" type="TextureRect" parent="Landing"]
+layout_mode = 0
+offset_left = 462.0
+offset_top = -129.0
+offset_right = 2582.0
+offset_bottom = 1064.0
+texture = ExtResource("3_k5vpw")
+
+[node name="into_bg" type="Label" parent="Landing"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 115.0
+offset_right = 875.0
+offset_bottom = 429.0
+scale = Vector2(1.66396, 1.66396)
+theme_override_colors/font_color = Color(0.678756, 0.0344945, 0.978307, 1)
+theme_override_fonts/font = ExtResource("4_5hr7j")
+theme_override_font_sizes/font_size = 300
+text = "into oblivion"
+
+[node name="into_oblivion" type="Label" parent="Landing"]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 217.0
+offset_right = 1099.0
+offset_bottom = 531.001
+theme_override_fonts/font = ExtResource("4_5hr7j")
+theme_override_font_sizes/font_size = 300
+text = "into oblivion"
+
+[node name="MenuStart" type="AnimationPlayer" parent="Landing"]
+root_node = NodePath("../choices")
+libraries = {
+"": SubResource("AnimationLibrary_g25y6")
+}
+
+[node name="choices" type="Control" parent="Landing"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 314.0
+offset_top = 1194.0
+offset_right = 314.0
+offset_bottom = 1194.0
+script = ExtResource("5_6r652")
+
+[node name="NewGame" type="Button" parent="Landing/choices"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 149.0
+offset_top = -580.0
+offset_right = 454.0
+offset_bottom = -533.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.15, 1.15)
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../Settings")
+focus_neighbor_bottom = NodePath("../LoadGame")
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.423651, 0.423651, 0.423651, 1)
+theme_override_colors/font_pressed_color = Color(0.661973, 0.423128, 0.979509, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_6umju")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6cs7y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4j7qr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1vkcv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wha4w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x5f7e")
+keep_pressed_outside = true
+text = "NEW GAME"
+
+[node name="LoadGame" type="Button" parent="Landing/choices"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 227.0
+offset_top = -524.0
+offset_right = 562.0
+offset_bottom = -477.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../NewGame")
+focus_neighbor_bottom = NodePath("../Settings")
+focus_mode = 0
+theme_override_colors/font_color = Color(0.423651, 0.423651, 0.423651, 1)
+theme_override_colors/font_pressed_color = Color(0.661973, 0.423128, 0.979509, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_6umju")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6cs7y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4j7qr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1vkcv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wha4w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x5f7e")
+keep_pressed_outside = true
+text = "LOAD GAME"
+
+[node name="Settings" type="Button" parent="Landing/choices"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 204.0
+offset_top = -481.0
+offset_right = 539.0
+offset_bottom = -434.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../LoadGame")
+focus_neighbor_bottom = NodePath("../NewGame")
+focus_mode = 0
+theme_override_colors/font_color = Color(0.423651, 0.423651, 0.423651, 1)
+theme_override_colors/font_pressed_color = Color(0.661973, 0.423128, 0.979509, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_6umju")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6cs7y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4j7qr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1vkcv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wha4w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x5f7e")
+keep_pressed_outside = true
+text = "SETTINGS"
+
+[node name="Cursor" type="TextureRect" parent="Landing/choices"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = -581.0
+offset_right = 198.0
+offset_bottom = -557.0
+texture = ExtResource("7_qtfiy")
+expand_mode = 1
+script = ExtResource("8_ku8a3")
+
+[node name="ButtonAnimations" type="AnimationPlayer" parent="Landing/choices"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_3rvqp")
+}
+
+[node name="HoverFade" type="AnimationPlayer" parent="Landing/choices"]
+libraries = {
+"": SubResource("AnimationLibrary_5i8dk")
+}
+
+[node name="ButtonBlend" type="AnimationTree" parent="Landing/choices"]
+root_node = NodePath("../../..")
+tree_root = SubResource("AnimationNodeBlendTree_o36ci")
+anim_player = NodePath("../ButtonAnimations")
+parameters/Exits/blend_amount = 0
+"parameters/Hover Blend/blend_amount" = 0.0
+"parameters/Hover Exit Blend/blend_amount" = 0
+parameters/Hovers/blend_amount = 0.0
+
+[node name="menu_huver" type="AudioStreamPlayer" parent="Landing/choices"]
+stream = ExtResource("9_m5v46")
+volume_db = -13.0
+bus = &"SFX"
+
+[node name="menu_huver2" type="AudioStreamPlayer" parent="Landing/choices"]
+stream = ExtResource("10_26ylb")
+volume_db = -13.0
+bus = &"SFX"
+
+[node name="menu_huver3" type="AudioStreamPlayer" parent="Landing/choices"]
+stream = ExtResource("11_4q43f")
+volume_db = -13.0
+bus = &"SFX"
+
+[node name="menu_click" type="AudioStreamPlayer" parent="Landing/choices"]
+stream = ExtResource("7_w8v2h")
+volume_db = -2.0
+bus = &"SFX"
+
+[node name="menu_click2" type="AudioStreamPlayer" parent="Landing/choices"]
+stream = ExtResource("8_udeve")
+volume_db = -2.0
+bus = &"SFX"
+
+[node name="menu_click3" type="AudioStreamPlayer" parent="Landing/choices"]
+stream = ExtResource("9_0bf0j")
+volume_db = -2.0
+bus = &"SFX"
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="Landing"]
+stream = ExtResource("7_4jmhx")
+volume_db = -5.0
+bus = &"Music"
+
+[node name="Settings" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("16_cjj30")
+
+[node name="SettingsEnter" type="AnimationPlayer" parent="Settings"]
+libraries = {
+"": SubResource("AnimationLibrary_a3c36")
+}
+
+[node name="SettingsExit" type="AnimationPlayer" parent="Settings"]
+libraries = {
+"": SubResource("AnimationLibrary_a3c36")
+}
+
+[node name="SettingsBG" type="TextureRect" parent="Settings"]
+modulate = Color(1, 1, 1, 0.835294)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_k7kxl")
+
+[node name="SettingsTitle" type="Label" parent="Settings"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 109.0
+offset_right = 407.0
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("7_6umju")
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS"
+
+[node name="SettingsDivider" type="ColorRect" parent="Settings"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 181.0
+offset_right = 1756.0
+offset_bottom = 183.0
+color = Color(1, 0, 1, 1)
+
+[node name="SettingsDivider2" type="ColorRect" parent="Settings"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 231.0
+offset_right = 1453.0
+offset_bottom = 232.0
+rotation = 1.5708
+color = Color(1, 0, 1, 1)
+
+[node name="SettingsChoices" type="Control" parent="Settings"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("18_i267c")
+
+[node name="Display" type="Button" parent="Settings/SettingsChoices"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 264.0
+offset_right = 414.0
+offset_bottom = 309.0
+theme_override_fonts/font = ExtResource("7_6umju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mrn3h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d2og0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_robmj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6pym8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ef7k")
+text = "Display"
+alignment = 0
+
+[node name="Sound" type="Button" parent="Settings/SettingsChoices"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 328.0
+offset_right = 414.0
+offset_bottom = 373.0
+theme_override_fonts/font = ExtResource("7_6umju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_faojm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fvssq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ounrg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g1rw5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_njtep")
+text = "Sound"
+alignment = 0
+
+[node name="Controls" type="Button" parent="Settings/SettingsChoices"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 393.0
+offset_right = 422.0
+offset_bottom = 438.0
+theme_override_fonts/font = ExtResource("7_6umju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m7o77")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rc8nq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d7033")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2b1l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6brho")
+text = "Controls"
+alignment = 0
+
+[node name="Back" type="Button" parent="Settings/SettingsChoices"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 968.0
+offset_right = 449.0
+offset_bottom = 1013.0
+theme_override_fonts/font = ExtResource("7_6umju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m7o77")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rc8nq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d7033")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2b1l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6brho")
+text = "Back"
+alignment = 0
+
+[node name="music_volume" type="HSlider" parent="Settings/SettingsChoices"]
+layout_mode = 0
+offset_left = 939.0
+offset_top = 425.0
+offset_right = 947.0
+offset_bottom = 441.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("18_tkbxy")
+
+[node name="menu_huver" type="AudioStreamPlayer" parent="Settings/SettingsChoices"]
+stream = ExtResource("9_m5v46")
+volume_db = -13.0
+bus = &"SFX"
+
+[node name="menu_click" type="AudioStreamPlayer" parent="Settings/SettingsChoices"]
+stream = ExtResource("7_w8v2h")
+volume_db = -2.0
+bus = &"SFX"
+
+[node name="back" type="AudioStreamPlayer" parent="Settings/SettingsChoices"]
+stream = ExtResource("18_tmill")
+volume_db = -10.0
+bus = &"SFX"
+
+[connection signal="animation_finished" from="Landing/MenuStart" to="Landing/choices" method="_on_menu_start_animation_finished"]
+[connection signal="focus_entered" from="Landing/choices/NewGame" to="Landing/choices" method="_on_new_game_focus_entered"]
+[connection signal="mouse_entered" from="Landing/choices/NewGame" to="Landing/choices" method="_on_new_game_mouse_entered"]
+[connection signal="mouse_entered" from="Landing/choices/NewGame" to="Landing/choices/Cursor" method="_on_new_game_mouse_entered"]
+[connection signal="mouse_exited" from="Landing/choices/NewGame" to="Landing/choices" method="_on_new_game_mouse_exited"]
+[connection signal="mouse_exited" from="Landing/choices/NewGame" to="Landing/choices/Cursor" method="_on_new_game_mouse_exited"]
+[connection signal="pressed" from="Landing/choices/NewGame" to="Landing/choices" method="_on_new_game_pressed"]
+[connection signal="focus_entered" from="Landing/choices/LoadGame" to="Landing/choices" method="_on_load_game_focus_entered"]
+[connection signal="mouse_entered" from="Landing/choices/LoadGame" to="Landing/choices" method="_on_load_game_mouse_entered"]
+[connection signal="mouse_entered" from="Landing/choices/LoadGame" to="Landing/choices/Cursor" method="_on_load_game_mouse_entered"]
+[connection signal="mouse_exited" from="Landing/choices/LoadGame" to="Landing/choices" method="_on_load_game_mouse_exited"]
+[connection signal="mouse_exited" from="Landing/choices/LoadGame" to="Landing/choices/Cursor" method="_on_load_game_mouse_exited"]
+[connection signal="pressed" from="Landing/choices/LoadGame" to="Landing/choices" method="_on_load_game_pressed"]
+[connection signal="focus_entered" from="Landing/choices/Settings" to="Landing/choices" method="_on_settings_focus_entered"]
+[connection signal="mouse_entered" from="Landing/choices/Settings" to="Landing" method="_on_settings_mouse_entered"]
+[connection signal="mouse_entered" from="Landing/choices/Settings" to="Landing/choices" method="_on_settings_mouse_entered"]
+[connection signal="mouse_entered" from="Landing/choices/Settings" to="Landing/choices/Cursor" method="_on_settings_mouse_entered"]
+[connection signal="mouse_exited" from="Landing/choices/Settings" to="Landing/choices" method="_on_settings_mouse_exited"]
+[connection signal="mouse_exited" from="Landing/choices/Settings" to="Landing/choices/Cursor" method="_on_settings_mouse_exited"]
+[connection signal="pressed" from="Landing/choices/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Landing/choices/Settings" to="Landing/choices" method="_on_settings_pressed"]
+[connection signal="pressed" from="Landing/choices/Settings" to="Settings" method="_on_settings_pressed"]
+[connection signal="animation_finished" from="Settings/SettingsEnter" to="Settings" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Settings/SettingsExit" to="Settings" method="_on_settings_exit_animation_finished"]
+[connection signal="mouse_entered" from="Settings/SettingsChoices/Display" to="Settings/SettingsChoices" method="_on_display_mouse_entered"]
+[connection signal="pressed" from="Settings/SettingsChoices/Display" to="Settings/SettingsChoices" method="_on_display_pressed"]
+[connection signal="mouse_entered" from="Settings/SettingsChoices/Sound" to="Settings/SettingsChoices" method="_on_sound_mouse_entered"]
+[connection signal="pressed" from="Settings/SettingsChoices/Sound" to="Settings/SettingsChoices" method="_on_sound_pressed"]
+[connection signal="mouse_entered" from="Settings/SettingsChoices/Controls" to="Settings/SettingsChoices" method="_on_controls_mouse_entered"]
+[connection signal="pressed" from="Settings/SettingsChoices/Controls" to="Settings/SettingsChoices" method="_on_controls_pressed"]
+[connection signal="mouse_entered" from="Settings/SettingsChoices/Back" to="Settings/SettingsChoices" method="_on_back_mouse_entered"]
+[connection signal="pressed" from="Settings/SettingsChoices/Back" to="Settings" method="_on_back_pressed"]

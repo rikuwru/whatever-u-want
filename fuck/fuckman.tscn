@@ -1,0 +1,418 @@
+[gd_scene load_steps=14 format=3 uid="uid://bonhkrosmqwel"]
+
+[ext_resource type="Texture2D" uid="uid://pqx5edadelra" path="res://Black.png" id="1_l6hvv"]
+[ext_resource type="FontFile" uid="uid://cp5f6h0tbv73s" path="res://KHMenu.otf" id="2_u4ywf"]
+[ext_resource type="Texture2D" uid="uid://chc5qb11s25xc" path="res://riku.png" id="2_xu847"]
+[ext_resource type="FontFile" uid="uid://dku4314ya5pdx" path="res://Gothic War.otf" id="3_l5332"]
+[ext_resource type="AudioStream" uid="uid://dxmiwsnaio8sw" path="res://menu_theme.ogg" id="4_31y77"]
+
+[sub_resource type="Animation" id="Animation_d5udu"]
+resource_name = "FadeIn"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons/NewGame:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons/NewGame:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Buttons/LoadGame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 65)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Buttons/LoadGame:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Buttons/Settings:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 129)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Buttons/Settings:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("IntoOblivion:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(241, 208)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("IntoOblivion:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Riku:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(523, -82), Vector2(523, -82)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Riku:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Riku:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1920, 1080), Vector2(1920, 1080)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Riku:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e8ame"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons/NewGame:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons/NewGame:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Buttons/LoadGame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 65)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Buttons/LoadGame:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Buttons/Settings:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 129)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Buttons/Settings:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("IntoOblivion:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(241, 208)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("IntoOblivion:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Riku:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(523, -82)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Riku:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Riku:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1920, 1080)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Riku:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4bmpa"]
+_data = {
+"FadeIn": SubResource("Animation_d5udu"),
+"RESET": SubResource("Animation_e8ame")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cc5qb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfp5a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bbnee"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pdvh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0hwl"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_l6hvv")
+
+[node name="Riku" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 523.0
+offset_top = -82.0
+offset_right = 2443.0
+offset_bottom = 998.0
+texture = ExtResource("2_xu847")
+
+[node name="IntoOblivion" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 241.0
+offset_top = 208.0
+offset_right = 1098.0
+offset_bottom = 522.0
+theme_override_fonts/font = ExtResource("3_l5332")
+theme_override_font_sizes/font_size = 300
+text = "into oblivion"
+
+[node name="MenuStart" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4bmpa")
+}
+
+[node name="MenuTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_31y77")
+
+[node name="Buttons" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 512.0
+offset_top = 577.0
+offset_right = 845.0
+offset_bottom = 744.0
+
+[node name="NewGame" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_right = 305.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.389287, 0.389287, 0.389287, 1)
+theme_override_colors/font_pressed_color = Color(0.665079, 0.269649, 0.88695, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_u4ywf")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cc5qb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rfp5a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bbnee")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4pdvh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p0hwl")
+text = "NEW GAME"
+
+[node name="LoadGame" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_top = 65.0
+offset_right = 335.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0.389287, 0.389287, 0.389287, 1)
+theme_override_colors/font_pressed_color = Color(0.665079, 0.269649, 0.88695, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_u4ywf")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cc5qb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rfp5a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bbnee")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4pdvh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p0hwl")
+text = "LOAD GAME"
+
+[node name="Settings" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 129.0
+offset_right = 292.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0.389287, 0.389287, 0.389287, 1)
+theme_override_colors/font_pressed_color = Color(0.665079, 0.269649, 0.88695, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_u4ywf")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cc5qb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rfp5a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bbnee")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4pdvh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p0hwl")
+text = "SETTINGS"
